@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
+
+/* Reset */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+* {
+	margin: 0;
+}
+body {
+	line-height: 1.5;
+	font-family: "Rubik", sans-serif;
+	font-size: initial;
+	-webkit-font-smoothing: antialiased;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+main {
+	height: 100dvh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+main > h3 {
+	margin-block-start: 2.5rem;
+	text-transform: uppercase;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	/* gap: 0.75rem; */
+	width: 100%;
+	max-width: 32rem;
+	margin-block-start: 2rem;
+}
+
+form label {
+	font-weight: 500;
+	text-transform: capitalize;
+}
+
+form > input,
+form > select {
+	margin-block-end: 1.25rem;
+}
+
+form > button {
+	background: lightblue;
+	border: none;
+	border-radius: 4px;
+	padding-inline: 8px;
+	padding-block: 4px;
+	cursor: pointer;
+}
+
+.success-msg,
+.error-msg {
+	display: flex;
+	gap: 0.25rem;
+	align-items: center;
+	margin: 10px 0;
+	padding: 8px;
+	border-radius: 3px 3px 3px 3px;
+	font-size: 0.875rem;
+}
+
+.success-msg {
+	color: #270;
+	background-color: #dff2bf;
+}
+
+.error-msg {
+	color: #d8000c;
+	background-color: #ffbaba;
+}
+
+.hide {
+	display: none;
+}
