@@ -1,4 +1,7 @@
 const form = document.querySelector("#userinfo");
+const buttonText = document.querySelector("#register-text");
+const loader = document.createElement("div");
+loader.classList.add("loader");
 
 async function registerUser() {
 	const formData = new FormData(form);
@@ -9,6 +12,7 @@ async function registerUser() {
 	let newElem;
 
 	try {
+		buttonText.replaceWith(loader);
 		const response = await fetch("http://localhost:5000/register", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
@@ -16,6 +20,7 @@ async function registerUser() {
 		});
 
 		const data = await response.json();
+		loader.replaceWith(buttonText);
 
 		if (data.errors) {
 			console.log(data.errors);
